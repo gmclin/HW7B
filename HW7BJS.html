@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript Example for Finding Volume</title>
+ 
+</head>
+
+<body>
+<h1>Javascript Example for Finding Volume</h1>
+<p>The first illustration will use a "While" loop  instead of the "For" loop to calculate the volume.</p>
+
+<script>
+//Declaration of variables:
+function startProcess() {
+    var length = i + 2 ;  
+    var width = i + 3; 
+    var height = i + 4;
+    var msg = '';
+    var i = 0; 
+
+        while (i < 10) {  //Calculating the volume...
+           
+          length = i + 2 ;    
+          width = i + 3; 
+          height = i + 4;
+            var myVolume = getVolume(length, width, height); //calling the function "getVolume"
+          document.write ("Volume =  " + myVolume + "<br/>");
+          i++;
+         }
+
+
+     //   for (i = 0; i < 10; i++) {
+     //       length = i + 2 ;  
+     //       width = i + 3; 
+     //       height = i + 4;
+     //       var myVolume = getVolume(length, width, height); //calling the function "getVolume"
+     //       document.write ("Volume =  " + myVolume + "<br>");       
+     //       }     
+//      Using the "FOR" statement to get volume and "IF-THEN-ELSE" to display volume-type message.....
+     document.write( "<br>"  + "<br>" + "Next illustration will display results of" + " If-Then-Else " + "statements:" + "<br>"+ "<br>")
+
+        for (i = 0; i < 10; i++) {
+           
+            length = i + 2 ;    
+            width = i + 3; 
+            height = i + 4;
+            var myVolume = getVolume(length, width, height); //calling the function "getVolume
+            document.write; 
+         
+          
+ 
+            
+            if ((myVolume>=0) && (myVolume<=100)) {
+                document.write ( "Small " + "<br/>");
+               // document.write ("Medium  "+ "<br/>");
+               // document.write ("Large  "+ "<br/>");
+              //  document.write ("Extra Large  "+ "<br/>");
+            } 
+            else if ((myVolume>=101) && (myVolume<= 500)) {
+                document.write (" Medium  " + "<br/>");
+            }
+            else if ((myVolume>=501) && (myVolume<=1000)){
+                document.write (" Large  "  + "<br/>");
+            }
+ 
+            else if ((myVolume >=1000) && (myVolume<=2000)) {
+                document.write (" Extra Large Vol "  + "<br/>");
+            }
+            else { 
+                 document.write ('Data not valid!' + '<br/>');
+
+            }  //End of 'If-Then-Else"
+
+        }  //End of "For" loop.
+         
+
+//  Beginning of "SWITCH" statement....
+
+        document.write("<br>" + "<br>" + "Last illustration will display a message based on user's selection of volume size:" +"<br>")
+        var msg;
+        var volsize = 'extra large';
+       
+
+         switch(volsize) {
+         case 'small':
+         document.write("Your volume size is Small. =  " + myvolume) ;
+                "Volume = " + myvolume;
+                break;
+
+        case 'medium':
+        document.write("Your volume size is Medium Volume. =  " + myvolume) ;
+                "Volume = " + myvolume;
+                break;
+
+        case 'large':
+            document.write("Your volume size is Large Volume.  =  " + myvolume) ;
+                "Volume = " + myvolume;
+                break;
+         case 'extra large':
+            document.write("Your volume size is Extra Large.  Volume = 1320" ) ;
+            break;
+
+            default: 
+            msg = "Looking forward to the Weekend";
+         }
+
+
+         //The function "getvolume".                                        
+    function getVolume(length ,width,  height){       
+    var ResultGetVolume = (length * width * height);
+      
+    return ResultGetVolume ; //Volume Value returned to doc.write
+}
+}
+ startProcess();
+</script>
+
+</body>
+
+
+</html>
